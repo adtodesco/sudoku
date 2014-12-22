@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01300D3017400B2400413661 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 01300D2F17400B2400413661 /* Node.m */; };
+		01300D3417400B3200413661 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 01300D3317400B3200413661 /* List.m */; };
+		01300D3717400B3F00413661 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 01300D3617400B3F00413661 /* Stack.m */; };
 		0195B950173D703B008DE6ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0195B94F173D703B008DE6ED /* UIKit.framework */; };
 		0195B952173D703B008DE6ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0195B951173D703B008DE6ED /* Foundation.framework */; };
 		0195B954173D703B008DE6ED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0195B953173D703B008DE6ED /* CoreGraphics.framework */; };
@@ -18,9 +21,19 @@
 		0195B966173D703B008DE6ED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0195B965173D703B008DE6ED /* Default-568h@2x.png */; };
 		0195B969173D703B008DE6ED /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0195B967173D703B008DE6ED /* MainStoryboard.storyboard */; };
 		0195B96C173D703B008DE6ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195B96B173D703B008DE6ED /* ViewController.m */; };
+		0195B974173D7693008DE6ED /* SudokuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195B973173D7693008DE6ED /* SudokuView.m */; };
+		0195B97A173D7753008DE6ED /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195B979173D7753008DE6ED /* Constants.m */; };
+		0195B981173DC74E008DE6ED /* Board.m in Sources */ = {isa = PBXBuildFile; fileRef = 0195B980173DC74E008DE6ED /* Board.m */; };
+		0195B983173DD079008DE6ED /* msk_009.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0195B982173DD078008DE6ED /* msk_009.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01300D2E17400B2300413661 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		01300D2F17400B2400413661 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		01300D3217400B3200413661 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		01300D3317400B3200413661 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		01300D3517400B3F00413661 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		01300D3617400B3F00413661 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		0195B94B173D703B008DE6ED /* TodescoSudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodescoSudoku.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0195B94F173D703B008DE6ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0195B951173D703B008DE6ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +50,13 @@
 		0195B968173D703B008DE6ED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0195B96A173D703B008DE6ED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0195B96B173D703B008DE6ED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0195B972173D7693008DE6ED /* SudokuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SudokuView.h; sourceTree = "<group>"; };
+		0195B973173D7693008DE6ED /* SudokuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SudokuView.m; sourceTree = "<group>"; };
+		0195B978173D7753008DE6ED /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		0195B979173D7753008DE6ED /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		0195B97F173DC74E008DE6ED /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
+		0195B980173DC74E008DE6ED /* Board.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Board.m; sourceTree = "<group>"; };
+		0195B982173DD078008DE6ED /* msk_009.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = msk_009.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,12 @@
 		0195B940173D703B008DE6ED = {
 			isa = PBXGroup;
 			children = (
+				01300D2E17400B2300413661 /* Node.h */,
+				01300D2F17400B2400413661 /* Node.m */,
+				01300D3217400B3200413661 /* List.h */,
+				01300D3317400B3200413661 /* List.m */,
+				01300D3517400B3F00413661 /* Stack.h */,
+				01300D3617400B3F00413661 /* Stack.m */,
 				0195B955173D703B008DE6ED /* TodescoSudoku */,
 				0195B94E173D703B008DE6ED /* Frameworks */,
 				0195B94C173D703B008DE6ED /* Products */,
@@ -86,8 +112,15 @@
 				0195B95E173D703B008DE6ED /* AppDelegate.h */,
 				0195B95F173D703B008DE6ED /* AppDelegate.m */,
 				0195B967173D703B008DE6ED /* MainStoryboard.storyboard */,
+				0195B972173D7693008DE6ED /* SudokuView.h */,
+				0195B973173D7693008DE6ED /* SudokuView.m */,
 				0195B96A173D703B008DE6ED /* ViewController.h */,
 				0195B96B173D703B008DE6ED /* ViewController.m */,
+				0195B97F173DC74E008DE6ED /* Board.h */,
+				0195B980173DC74E008DE6ED /* Board.m */,
+				0195B978173D7753008DE6ED /* Constants.h */,
+				0195B979173D7753008DE6ED /* Constants.m */,
+				0195B982173DD078008DE6ED /* msk_009.txt */,
 				0195B956173D703B008DE6ED /* Supporting Files */,
 			);
 			path = TodescoSudoku;
@@ -163,6 +196,7 @@
 				0195B964173D703B008DE6ED /* Default@2x.png in Resources */,
 				0195B966173D703B008DE6ED /* Default-568h@2x.png in Resources */,
 				0195B969173D703B008DE6ED /* MainStoryboard.storyboard in Resources */,
+				0195B983173DD079008DE6ED /* msk_009.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +210,12 @@
 				0195B95C173D703B008DE6ED /* main.m in Sources */,
 				0195B960173D703B008DE6ED /* AppDelegate.m in Sources */,
 				0195B96C173D703B008DE6ED /* ViewController.m in Sources */,
+				0195B974173D7693008DE6ED /* SudokuView.m in Sources */,
+				0195B97A173D7753008DE6ED /* Constants.m in Sources */,
+				0195B981173DC74E008DE6ED /* Board.m in Sources */,
+				01300D3017400B2400413661 /* Node.m in Sources */,
+				01300D3417400B3200413661 /* List.m in Sources */,
+				01300D3717400B3F00413661 /* Stack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +334,7 @@
 				0195B971173D703B008DE6ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

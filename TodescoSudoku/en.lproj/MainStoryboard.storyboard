@@ -1,23 +1,162 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="4">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8LJ-VZ-bT6" customClass="SudokuView">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mV3-3v-AI0">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="173" id="DKV-Lz-xoc"/>
+                                            <constraint firstAttribute="height" constant="69" id="k4h-dZ-sBE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Solve">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="solvePuzzle:" destination="2" eventType="touchUpInside" id="hSf-bm-5O2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BWx-Rl-oLs">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="173" id="uLV-K3-Ow5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <state key="normal" title="Undo">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoMove:" destination="2" eventType="touchUpInside" id="rJq-AS-NZ1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlv-Zq-wee">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="688" id="iAC-EI-23Z"/>
+                                            <constraint firstAttribute="height" constant="200" id="rFn-C9-8mh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="130"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <size key="shadowOffset" width="2" height="-2"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.00030246520149999998" green="0.78061224490000003" blue="0.13541766420000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="mV3-3v-AI0" firstAttribute="leading" secondItem="8LJ-VZ-bT6" secondAttribute="leading" constant="42" id="BKa-6F-PRy"/>
+                                    <constraint firstItem="Nlv-Zq-wee" firstAttribute="top" secondItem="8LJ-VZ-bT6" secondAttribute="top" constant="278" id="ZZe-mf-Fmw"/>
+                                    <constraint firstItem="BWx-Rl-oLs" firstAttribute="bottom" secondItem="mV3-3v-AI0" secondAttribute="bottom" type="default" id="bR8-DD-g71"/>
+                                    <constraint firstItem="Nlv-Zq-wee" firstAttribute="centerX" secondItem="8LJ-VZ-bT6" secondAttribute="centerX" type="default" id="h0c-cB-U76"/>
+                                    <constraint firstAttribute="bottom" secondItem="mV3-3v-AI0" secondAttribute="bottom" constant="10" id="tEW-yz-Z8q"/>
+                                    <constraint firstAttribute="trailing" secondItem="BWx-Rl-oLs" secondAttribute="trailing" constant="50" id="vHg-Uu-wKI"/>
+                                    <constraint firstItem="BWx-Rl-oLs" firstAttribute="top" secondItem="mV3-3v-AI0" secondAttribute="top" type="default" id="ytc-m3-X64"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXM-4J-3ja">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="FKM-4z-WGG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetBoard:" destination="2" eventType="touchUpInside" id="YNB-1e-Qlu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL2-fd-GA8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Jm9-Bt-tL5"/>
+                                    <constraint firstAttribute="width" constant="173" id="Lps-hB-uLM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newGame:" destination="2" eventType="touchUpInside" id="Or8-Ti-amI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sudoku" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpa-Tx-hhQ">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="XiN-oy-gN9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="80"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.00030246520149999998" green="0.78061224490000003" blue="0.13541766420000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sL2-fd-GA8" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="44" id="DPi-KD-hvS"/>
+                            <constraint firstAttribute="bottom" secondItem="8LJ-VZ-bT6" secondAttribute="bottom" constant="89" id="Ds7-tU-UqU"/>
+                            <constraint firstAttribute="trailing" secondItem="HXM-4J-3ja" secondAttribute="trailing" constant="48" id="Lez-Nv-1yv"/>
+                            <constraint firstAttribute="bottom" secondItem="sL2-fd-GA8" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="RfF-3B-7oo"/>
+                            <constraint firstItem="8LJ-VZ-bT6" firstAttribute="top" secondItem="5" secondAttribute="top" type="default" id="WJX-Rf-peO"/>
+                            <constraint firstAttribute="bottom" secondItem="HXM-4J-3ja" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="nLr-4b-9Vh"/>
+                            <constraint firstItem="8LJ-VZ-bT6" firstAttribute="trailing" secondItem="5" secondAttribute="trailing" type="default" id="qKH-dp-KVL"/>
+                            <constraint firstAttribute="bottom" secondItem="Kpa-Tx-hhQ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="qgi-qj-O8e"/>
+                            <constraint firstItem="sL2-fd-GA8" firstAttribute="top" secondItem="Kpa-Tx-hhQ" secondAttribute="top" type="default" id="uo7-ce-ciH"/>
+                            <constraint firstItem="HXM-4J-3ja" firstAttribute="top" secondItem="Kpa-Tx-hhQ" secondAttribute="top" type="default" id="vKr-dX-Sja"/>
+                            <constraint firstItem="Kpa-Tx-hhQ" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="232" id="wPE-P5-sEA"/>
+                            <constraint firstItem="8LJ-VZ-bT6" firstAttribute="leading" secondItem="5" secondAttribute="leading" type="default" id="ysY-uE-ghI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="Nlv-Zq-wee" id="9HL-gF-oGK"/>
+                        <outlet property="sudokuView" destination="8LJ-VZ-bT6" id="ep6-zd-b5G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SudokuView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SudokuView.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="newGame:" candidateClass="UIButton"/>
+                <relationship kind="action" name="resetBoard:" candidateClass="UIButton"/>
+                <relationship kind="action" name="solvePuzzle:" candidateClass="UIButton"/>
+                <relationship kind="action" name="undoMove:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="sudokuView" candidateClass="SudokuView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
